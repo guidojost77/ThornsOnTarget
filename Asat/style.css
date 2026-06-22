@@ -1557,3 +1557,580 @@ main > * {
     height: 44px;
   }
 }
+
+
+/* V2.3: Ãœber-uns-Seite mit Bildfeldern */
+.about-page-clean {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-intro-stage {
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 100px 58px 86px;
+  display: grid;
+  grid-template-columns: minmax(240px, 0.72fr) minmax(520px, 1.45fr) minmax(240px, 0.72fr);
+  gap: 34px;
+  align-items: stretch;
+  position: relative;
+}
+
+.about-intro-stage::before {
+  content: "";
+  position: absolute;
+  inset: 40px 30px;
+  background:
+    radial-gradient(circle at 50% 36%, rgba(212,175,55,0.15), transparent 48%),
+    radial-gradient(circle at 16% 58%, rgba(193,18,31,0.07), transparent 38%),
+    radial-gradient(circle at 84% 58%, rgba(193,18,31,0.06), transparent 38%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.portrait-placeholder {
+  min-height: 560px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(212,175,55,0.28);
+  background:
+    linear-gradient(145deg, rgba(18,18,18,0.94), rgba(4,4,4,0.96)),
+    radial-gradient(circle at 50% 22%, rgba(212,175,55,0.10), transparent 45%);
+  box-shadow:
+    0 28px 58px rgba(0,0,0,0.50),
+    inset 0 0 30px rgba(212,175,55,0.035);
+  overflow: hidden;
+  position: relative;
+}
+
+.portrait-left {
+  clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 0 100%);
+}
+
+.portrait-right {
+  clip-path: polygon(28px 0, 100% 0, 100% 100%, 0 100%, 0 28px);
+}
+
+.portrait-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px dashed rgba(212,175,55,0.22);
+  pointer-events: none;
+}
+
+.placeholder-inner {
+  padding: 36px 24px;
+  text-align: center;
+  max-width: 260px;
+}
+
+.placeholder-label {
+  display: block;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 900;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.placeholder-inner p {
+  margin: 0;
+  color: #bdbdbd;
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.about-center-card {
+  padding: 52px 54px;
+  border: 1px solid rgba(212,175,55,0.34);
+  background:
+    linear-gradient(145deg, rgba(20,20,20,0.96), rgba(4,4,4,0.97)),
+    radial-gradient(circle at 50% 0%, rgba(212,175,55,0.10), transparent 45%);
+  box-shadow:
+    0 32px 68px rgba(0,0,0,0.55),
+    inset 0 0 34px rgba(212,175,55,0.035);
+  clip-path: polygon(0 0, calc(100% - 32px) 0, 100% 32px, 100% 100%, 32px 100%, 0 calc(100% - 32px));
+}
+
+.about-center-card h1 {
+  margin: 0 0 30px;
+  color: #f4f4f4;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: clamp(38px, 3.05vw, 64px);
+  line-height: 1.05;
+}
+
+.about-center-card p {
+  color: #d9d9d9;
+  line-height: 1.72;
+  font-size: 17px;
+  margin: 0 0 20px;
+}
+
+.about-main-text {
+  font-size: 19px !important;
+  color: #ffffff !important;
+}
+
+.about-mini-values {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.about-mini-values span {
+  display: inline-flex;
+  padding: 12px 18px;
+  border: 1px solid rgba(212,175,55,0.30);
+  background: rgba(0,0,0,0.22);
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 900;
+  clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+}
+
+.about-premium-section {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 92px 58px;
+  position: relative;
+}
+
+.about-premium-section::before {
+  content: "";
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 24px;
+  bottom: 24px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(212,175,55,0.08), transparent 52%),
+    radial-gradient(circle at 20% 70%, rgba(193,18,31,0.045), transparent 42%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.about-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.about-text-panel,
+.about-achievement-grid article,
+.academy-card-grid article,
+.about-note-box {
+  padding: 34px;
+  border: 1px solid rgba(212,175,55,0.30);
+  background:
+    linear-gradient(145deg, rgba(18,18,18,0.95), rgba(4,4,4,0.96)),
+    linear-gradient(90deg, rgba(212,175,55,0.05), transparent);
+  box-shadow:
+    0 28px 56px rgba(0,0,0,0.45),
+    inset 0 0 28px rgba(212,175,55,0.035);
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+}
+
+.about-text-panel h3,
+.about-achievement-grid h3,
+.academy-card-grid h3 {
+  margin: 0 0 18px;
+  color: #f5f5f5;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 23px;
+}
+
+.about-text-panel p,
+.about-note-box p,
+.academy-card-grid p,
+.about-achievement-grid p {
+  margin: 0 0 18px;
+  color: #d8d8d8;
+  line-height: 1.72;
+  font-size: 16px;
+}
+
+.photo-placeholder-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.8fr;
+  gap: 24px;
+}
+
+.wide-photo-placeholder,
+.small-photo-placeholder {
+  min-height: 260px;
+  padding: 34px;
+  display: grid;
+  align-content: end;
+  border: 1px dashed rgba(212,175,55,0.35);
+  background:
+    linear-gradient(145deg, rgba(18,18,18,0.92), rgba(3,3,3,0.96)),
+    radial-gradient(circle at 50% 30%, rgba(212,175,55,0.09), transparent 42%);
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+}
+
+.wide-photo-placeholder {
+  min-height: 360px;
+}
+
+.wide-photo-placeholder span,
+.small-photo-placeholder span {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.wide-photo-placeholder p,
+.small-photo-placeholder p {
+  margin: 0;
+  color: #bdbdbd;
+  line-height: 1.5;
+}
+
+.about-achievement-grid,
+.academy-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.achievement-number {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--gold);
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 0 0 24px rgba(212,175,55,0.20);
+}
+
+.about-note-box {
+  max-width: 980px;
+  margin: 34px auto 0;
+  text-align: center;
+}
+
+.about-note-box .panel-line {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-quote-clean {
+  max-width: 1320px;
+  margin: 36px auto;
+  padding: 52px 64px;
+  text-align: center;
+  border-top: 1px solid rgba(212,175,55,0.32);
+  border-bottom: 1px solid rgba(212,175,55,0.32);
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.16), rgba(212,175,55,0.065), rgba(193,18,31,0.04), rgba(0,0,0,0.16));
+}
+
+.about-quote-clean p {
+  margin: 0;
+  color: #f5f5f5;
+  font-size: clamp(24px, 2.1vw, 40px);
+  line-height: 1.28;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.about-final-cta {
+  margin-top: 70px;
+}
+
+@media (max-width: 1180px) {
+  .about-intro-stage,
+  .about-two-column,
+  .photo-placeholder-grid,
+  .about-achievement-grid,
+  .academy-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait-placeholder {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-intro-stage,
+  .about-premium-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .about-center-card {
+    padding: 38px 26px;
+  }
+
+  .about-center-card h1 {
+    font-size: 36px;
+  }
+
+  .about-center-card p {
+    font-size: 15px;
+  }
+
+  .portrait-placeholder {
+    min-height: 300px;
+  }
+
+  .about-quote-clean {
+    padding: 42px 24px;
+  }
+}
+
+
+/* V2.4: Ãœber-uns Veredelung - Europameister, Farbstreifen, goldener Schein */
+.about-center-card,
+.about-text-panel,
+.about-achievement-grid article,
+.academy-card-grid article,
+.about-note-box,
+.euro-master-card,
+.portrait-placeholder,
+.wide-photo-placeholder,
+.small-photo-placeholder {
+  position: relative;
+}
+
+.about-center-card::before,
+.about-text-panel::before,
+.about-achievement-grid article::before,
+.academy-card-grid article::before,
+.euro-master-card::before {
+  content: "";
+  position: absolute;
+  left: 26px;
+  top: 24px;
+  width: 72px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--red));
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.22);
+  z-index: 2;
+}
+
+.about-center-card {
+  padding-top: 68px;
+}
+
+.about-text-panel,
+.about-achievement-grid article,
+.academy-card-grid article,
+.euro-master-card {
+  overflow: hidden;
+}
+
+.about-text-panel::after,
+.about-achievement-grid article::after,
+.academy-card-grid article::after,
+.euro-master-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -45% -20%;
+  height: 180px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(212,175,55,0.16), transparent 68%),
+    radial-gradient(circle at 18% 60%, rgba(193,18,31,0.08), transparent 58%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-text-panel > *,
+.about-achievement-grid article > *,
+.academy-card-grid article > *,
+.euro-master-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.euro-highlight {
+  margin-top: 34px;
+  padding: 24px 26px;
+  border: 1px solid rgba(212,175,55,0.42);
+  background:
+    linear-gradient(135deg, rgba(212,175,55,0.11), rgba(193,18,31,0.055), rgba(0,0,0,0.28));
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+  box-shadow:
+    0 0 42px rgba(212,175,55,0.12),
+    inset 0 0 22px rgba(212,175,55,0.05);
+}
+
+.euro-highlight .euro-kicker,
+.euro-master-card .euro-kicker {
+  display: block;
+  margin: 0 0 8px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.euro-highlight strong {
+  display: block;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 22px;
+  line-height: 1.15;
+}
+
+.euro-highlight p {
+  margin: 10px 0 0;
+  color: #d7d7d7;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.euro-master-card {
+  max-width: 1120px;
+  margin: 0 auto 32px;
+  padding: 46px 48px;
+  border: 1px solid rgba(212,175,55,0.45);
+  background:
+    linear-gradient(135deg, rgba(22,22,22,0.98), rgba(5,5,5,0.98)),
+    radial-gradient(circle at 72% 20%, rgba(212,175,55,0.16), transparent 50%);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.55),
+    0 0 70px rgba(212,175,55,0.10),
+    inset 0 0 34px rgba(212,175,55,0.045);
+  clip-path: polygon(0 0, calc(100% - 32px) 0, 100% 32px, 100% 100%, 32px 100%, 0 calc(100% - 32px));
+}
+
+.euro-master-card h3 {
+  margin: 0 0 18px;
+  color: #f8f8f8;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: clamp(28px, 2.4vw, 48px);
+  line-height: 1.08;
+}
+
+.euro-master-card p {
+  max-width: 880px;
+  color: #dcdcdc;
+  line-height: 1.72;
+  font-size: 17px;
+  margin: 0;
+}
+
+.about-achievement-grid article {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-achievement-grid article:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212,175,55,0.55);
+  box-shadow:
+    0 34px 72px rgba(0,0,0,0.58),
+    0 0 48px rgba(212,175,55,0.12),
+    inset 0 0 32px rgba(212,175,55,0.055);
+}
+
+.about-achievement-grid article:first-child {
+  border-color: rgba(212,175,55,0.50);
+  background:
+    linear-gradient(145deg, rgba(24,21,12,0.98), rgba(4,4,4,0.97)),
+    radial-gradient(circle at 40% 20%, rgba(212,175,55,0.22), transparent 48%);
+}
+
+@media (max-width: 760px) {
+  .euro-master-card {
+    padding: 40px 26px;
+  }
+
+  .euro-highlight strong {
+    font-size: 18px;
+  }
+}
+
+
+/* V2.5: Ãœber-uns Hero im Startseiten-Look */
+.about-center-card h1.about-brand-title {
+  margin: 0;
+  font-size: clamp(46px, 4.2vw, 82px);
+  line-height: 0.98;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #f4f4f4;
+  text-shadow: 0 0 32px rgba(255,255,255,0.10);
+}
+
+.about-brand-title span {
+  display: block;
+}
+
+.about-brand-title span:nth-child(2) {
+  color: var(--gold);
+  background: linear-gradient(90deg, #f3e4b0, var(--gold) 45%, #b88922 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-title-line {
+  width: min(100%, 720px);
+  height: 2px;
+  margin: 24px 0 26px;
+  background: linear-gradient(90deg, var(--gold), rgba(212,175,55,0.55), var(--red), transparent);
+  box-shadow: 0 0 24px rgba(212,175,55,0.18);
+}
+
+.about-sub-title {
+  margin: 0 0 28px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: clamp(19px, 1.25vw, 28px);
+  line-height: 1.35;
+  font-weight: 900;
+}
+
+.about-center-card::before {
+  width: 78px;
+  height: 4px;
+  top: 30px;
+}
+
+.euro-highlight strong,
+.euro-master-card h3 {
+  background: linear-gradient(90deg, #ffffff, #f3e4b0 35%, var(--gold) 72%, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-achievement-grid article:first-child .achievement-number {
+  font-size: 48px;
+  color: #ffffff;
+  text-shadow:
+    0 0 18px rgba(212,175,55,0.40),
+    0 0 36px rgba(193,18,31,0.16);
+}
+
+.about-achievement-grid article:first-child h3 {
+  color: var(--gold);
+}
+
+@media (max-width: 760px) {
+  .about-center-card h1.about-brand-title {
+    font-size: 40px;
+  }
+
+  .about-sub-title {
+    font-size: 17px;
+    letter-spacing: 3px;
+  }
+}
